@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/KTM_NAD16/static/css/main.a9bc0427.css",
+    "main.js": "/KTM_NAD16/static/js/main.3d09767a.js",
+    "static/media/background-img.png": "/KTM_NAD16/static/media/background-img.1a46a92c0b5af450fa8c.png",
+    "static/media/da-guojing-6888603_1280.jpg": "/KTM_NAD16/static/media/da-guojing-6888603_1280.40852a593060d4594254.jpg",
+    "index.html": "/KTM_NAD16/index.html",
+    "main.a9bc0427.css.map": "/KTM_NAD16/static/css/main.a9bc0427.css.map",
+    "main.3d09767a.js.map": "/KTM_NAD16/static/js/main.3d09767a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9bc0427.css",
+    "static/js/main.3d09767a.js"
+  ]
+}
