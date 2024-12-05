@@ -1,0 +1,198 @@
+/* Order Page Styling */
+.order-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa; /* Màu nền sáng nhẹ cho trang */
+}
+
+.order-page h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2a7e60; /* Màu xanh lá cây đậm */
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.order-page p {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #ffffff; /* Màu nền của card là trắng */
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.product-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.product-img-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Nút yêu thích (tim) */
+.favorite-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  background-size: cover; /* Đảm bảo hình ảnh đúng kích thước */
+  background-image: url('./assets/image-copy-3.png'); /* Mặc định là tim trắng */
+}
+
+.favorite-btn.liked {
+  background-image: url('./assets/image-copy-4.png'); /* Khi yêu thích, chuyển sang tim đỏ */
+}
+
+.favorite-btn:hover {
+  opacity: 0.7; /* Thêm hiệu ứng hover */
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2a7e60; /* Màu xanh lá cây đậm */
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-info h5 {
+  font-size: 16px;
+  color: #2a7e60; /* Màu xanh lá cây đậm */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-actions button {
+  width: 130px;
+  padding: 10px 0;
+  background-color: transparent;
+  border: 2px solid #2a7e60; /* Màu viền nút */
+  color: #2a7e60; /* Màu chữ xanh lá */
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-actions button:hover {
+  background-color: #2a7e60; /* Nền khi hover */
+  color: white; /* Màu chữ trắng khi hover */
+}
+
+.product-actions button:last-child {
+  background-color: #2a7e60; /* Nền xanh */
+  border: 2px solid #2a7e60; /* Viền xanh */
+  color: white; /* Chữ trắng */
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-actions button:last-child:hover {
+  background-color: #248c4d; /* Nền khi hover là màu xanh lá đậm */
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-actions button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-actions button {
+    width: 100px;
+  }
+}
+
+/* CSS cho các ô tìm kiếm */
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 280px; /* Tăng chiều rộng một chút */
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+.search-bar select {
+  width: 230px; /* Tăng chiều rộng của select một chút */
+}
+
+/* Thêm khoảng cách giữa các ô tìm kiếm */
+.search-bar select {
+  padding-right: 40px;
+}
